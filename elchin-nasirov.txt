@@ -81,28 +81,123 @@ link: https://codepen.io/enasirov/pen/YzPXMWO?editors=1100
 20. How do we select classes in CSS?
     - By using .className
 
-    21. How do we select a p element with a single class of “human””?
-    22. What is a parent child selector? When would this be useful? 
-    23. How do you select all links within a div with the class of sidebar?
-    24. What is a pseudo selector?
-    25. What do we use the change the spacing between lines?
-    26. What do we use to change the spacing between letters?
-    27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
-    28. How do I add a 1px border around my div that is dotted and black?
-    29. How do I select everything on the page? 
-    30. How do I write a comment in CSS?
-    31. How do I find out what file I am in, when I am using the command line? 
-    32. Using the command line - how do I see a list of files/folders in my current folder?
-    33. How do I remove a file via the command line? Why do I have to be careful with this? 
-    34. Why should I use version control? 
-    35. How often should I commit to github?
-    36. What is the command we would use to push our repo up to github? 
-    37. Walk me through Lambda's git flow. 
+21. How do we select a p element with a single class of “human””?
+    - p.human {
+        //property:value;
+    }
+
+22. What is a parent child selector? When would this be useful? 
+    - The ("parent > child") selector selects all elements that are a direct child of the specified element.
+      
+23. How do you select all links within a div with the class of sidebar?
+    - .sidebar.a {
+        //property:value;
+    }
+
+24. What is a pseudo selector?
+    - A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s).
+      For example, :hover can be used to change a button's color when the user's pointer hovers over it.
+
+25. What do we use the change the spacing between lines?
+    - 'line-height' property -> 
+      p {
+          line-height: normal;
+          }
+
+26. What do we use to change the spacing between letters?
+    - 'letter-spacing' property ->
+       h1 {
+           letter-spacing: 3px;
+           }
+
+27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+    - 'text transform' property ->
+      div.a {
+          text-transform: uppercase;
+          }
+
+      div.b {
+          text-transform: lowercase;
+          }
+
+      div.c {
+          text-transform: capitalize;
+          }
+
+28. How do I add a 1px border around my div that is dotted and black?
+    - div {
+        outline-color:black;
+        outline-style:dotted;
+        }
+
+29. How do I select everything on the page? 
+    - * {
+        //property:value;
+    }
+
+30. How do I write a comment in CSS?
+    - /*
+        Comment
+        goes
+        here
+    */
+
+31. How do I find out what file I am in, when I am using the command line? 
+    - pwd
+
+32. Using the command line - how do I see a list of files/folders in my current folder?
+    - ls
+
+33. How do I remove a file via the command line? Why do I have to be careful with this? 
+    - rm -rf fileName
+
+34. Why should I use version control? 
+    - Developing software without using version control is risky, like not having backups. 
+      Version control can also enable developers to move faster and it allows software teams
+      to preserve efficiency and agility as the team scales to include more developers.
+
+35. How often should I commit to github?
+    - Commit whenever you finish a step
+
+36. What is the command we would use to push our repo up to github? 
+    - git push -u origin firstName-lastName 
+
+37. Walk me through Lambda's git flow. 
+    - 1. Fork (Create your version of Repo)
+    - 2. Add your Lambda School TL as a collaborator (on GitHub: Settings -> Collaborators -> Add Collaborator)
+    - 3. Clone YOUR Repo (back on your machine: git clone <your-repo-address>)
+    - 4. Create a branch (cd <repo directory> git checkout -b 'firstname-lastname)
+    - 5. Push your new branch up to GitHub and make all future pushes to that branch (git push -u origin firstname-lastname)
+    - 6. Add your Lambda School TL as a reviewer on the Pull Request
+
+
 
 Stretch Questions
 
-    1. What is the difference between an inline element and a block element?
-    2. What happens when an element is positioned absolutely? 
-    3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
-    4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
-    5. In your own words, explain the box model. What is the fix for the box model? 
+1. What is the difference between an inline element and a block element?
+    - An inline element does not start on a new line and only takes up as much width as necessary.
+      <span>Hello World</span>
+
+    - A block-level element always starts on a new line and takes up the full width 
+      available (stretches out to the left and right as far as it can).
+      <div>Hello World</div>
+
+2. What happens when an element is positioned absolutely? 
+    - Absolutely positioned elements are removed entirely from the document flow. 
+
+3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
+    - 
+
+4. Name 3 elements that are display block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+    - Elements that display block by default: <div>, <form>, <header>
+    - Elements that display inline by default: <span>, <a>, <textarea>
+    - Element that display-block inline by default: <img>, <button>
+
+5. In your own words, explain the box model. What is the fix for the box model? 
+    - The CSS box model is essentially a box that wraps around our HTML elements.
+      It consists of: margins, borders, padding, and the actual content.
+      It allows us to add a border around elements, and to define space between elements. 
+      Content - The content of the box, where text and images appear
+      Padding - Clears an area around the content. The padding is transparent
+      Border - A border that goes around the padding and content
+      Margin - Clears an area outside the border. The margin is transparent
